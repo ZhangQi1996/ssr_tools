@@ -107,10 +107,11 @@ def delete_acc_by_file(file_name='delete_account.txt'):
             if line == '' or p.match(line) is not None:
                 continue
             port = re.split('\\s+', line)
-            if len(port) != 1 or is_numeric(port[0]):
+            if len(port) == 1 and is_numeric(port[0]):
+                user_info.append(int(port[0]))
+            else:
                 logging.error("the format of %s is illegal." % file_name)
                 sys.exit(-1)
-            user_info.append(int(port[0]))
     delete_account(user_info)
     logging.info("任务完成。")
 
