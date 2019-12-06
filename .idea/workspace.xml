@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_account/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/create_account/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_account/create_account.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_account/create_account.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delete_account/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/delete_account/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_account/create_account.txt" beforeDir="false" afterPath="$PROJECT_DIR$/create_account/create_account.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delete_account/delete_account.py" beforeDir="false" afterPath="$PROJECT_DIR$/delete_account/delete_account.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,27 +15,37 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/delete_account/README.md">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="220">
-                <caret line="14" selection-start-line="14" selection-end-line="14" />
-              </first_editor>
+              <first_editor />
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/create_account/create_account.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="226" column="4" selection-start-line="226" selection-start-column="4" selection-end-line="229" selection-end-column="12" />
+              <folding>
+                <element signature="e#47#58#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/create_account/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-114">
-                <caret line="25" lean-forward="true" selection-start-line="24" selection-end-line="25" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/delete_account/delete_account.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="165" column="26" lean-forward="true" selection-start-line="165" selection-start-column="26" selection-end-line="165" selection-end-column="26" />
+              <folding>
+                <element signature="e#45#59#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,10 +66,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/create_account/create_account.py" />
-        <option value="$PROJECT_DIR$/create_account/README.md" />
-        <option value="$PROJECT_DIR$/delete_account/delete_account.py" />
         <option value="$PROJECT_DIR$/delete_account/README.md" />
+        <option value="$PROJECT_DIR$/create_account/create_account.txt" />
+        <option value="$PROJECT_DIR$/create_account/README.md" />
+        <option value="$PROJECT_DIR$/create_account/create_account.py" />
+        <option value="$PROJECT_DIR$/delete_account/delete_account.py" />
       </list>
     </option>
   </component>
@@ -84,23 +95,7 @@
             <path>
               <item name="ssr_tools" type="b2602c69:ProjectViewProjectNode" />
               <item name="ssr_tools" type="462c0819:PsiDirectoryNode" />
-              <item name="create_account" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssr_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssr_tools" type="462c0819:PsiDirectoryNode" />
               <item name="delete_account" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssr_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssr_tools" type="462c0819:PsiDirectoryNode" />
-              <item name="generate_qr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssr_tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssr_tools" type="462c0819:PsiDirectoryNode" />
-              <item name="generate_qr" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -148,7 +143,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24950495" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24950495" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -159,7 +154,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32957748" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32957748" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -189,14 +184,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generate_qr/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -215,27 +202,6 @@
     <entry file="file://$PROJECT_DIR$/create_account/mujson_mgr.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/create_account/create_account.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/delete_account/delete_account.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="30" column="80" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
-          <caret line="48" column="80" selection-start-line="48" selection-start-column="80" selection-end-line="48" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/create_account/create_account.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1869">
-          <caret line="116" column="27" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="27" />
-          <folding>
-            <element signature="e#47#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/delete_account/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -246,13 +212,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/create_account/create_account.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/create_account/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-114">
-            <caret line="25" lean-forward="true" selection-start-line="24" selection-end-line="25" />
+          <first_editor relative-caret-position="600">
+            <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_account/create_account.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="226" column="4" selection-start-line="226" selection-start-column="4" selection-end-line="229" selection-end-column="12" />
+          <folding>
+            <element signature="e#47#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delete_account/delete_account.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="165" column="26" lean-forward="true" selection-start-line="165" selection-start-column="26" selection-end-line="165" selection-end-column="26" />
+          <folding>
+            <element signature="e#45#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

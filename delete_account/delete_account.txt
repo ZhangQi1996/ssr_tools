@@ -1,0 +1,5 @@
+# delete_account.txt
+# the lines headed by '#' and blank lines will be ignored
+# one port num that must between 1024 and 65535 per line
+1314
+1315

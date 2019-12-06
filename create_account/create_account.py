@@ -7,6 +7,7 @@ import sys
 import logging
 import time
 import re
+import os
 
 ARGS_CUR_POS = 0
 
@@ -122,6 +123,9 @@ def show_account():
 
 
 def create_acc_by_file(file_name='create_account.txt'):
+    if not os.path.exists(file_name):
+        logging.error("%s文件不存在" % file_name)
+        sys.exit(-1)
     user_info = {}
     p = re.compile("^#.*$")
     with open(file=file_name, mode='r', encoding='utf-8') as f:
@@ -130,7 +134,7 @@ def create_acc_by_file(file_name='create_account.txt'):
             if not line:
                 break
             line = line.rstrip('\n').strip()
-            if p.match(line) is not None:
+            if line == '' or p.match(line) is not None:
                 continue
             user = re.split('\\s+', line)
             if len(user) < 5:
@@ -148,6 +152,9 @@ def create_acc_by_file(file_name='create_account.txt'):
 
 
 def create_acc_by_excel(excel_name="create_account.xlsx", sheet_name="Sheet1"):
+    if not os.path.exists(excel_name):
+        logging.error("%s文件不存在" % excel_name)
+        sys.exit(-1)
     # 获取EXCEL信息
     user_info = get_userinfo(excel_name, sheet_name)
     if not user_info:
@@ -169,21 +176,22 @@ def judge():
 
 def usage():
     logging.info('''
-        Usage: python create_account.py [-h] [-f] [--file <file-name>] [-e/--excel <excel-name> <sheet-name>]
-        -h: print the usage of this script.
-        -f: use the default file named 'create_acc.txt' as a file used to create acc.
-        --file <file-name>: file-name that a specific file named by you as a file used to create acc. 
-        -e: use default create_account.xlsx and Sheet1 as excel name and sheet name respectively.
-        --excel <excel-name> <sheet-name>: specify your excel file and the sheet name used to create acc.
-        default: if no args is input, the script will exec just like 'python create_account.py -f'
-        -----------------------------
-        the non-excel file used to create acc must format just like:
-        =========================================================
-        # create_acc.txt
-        # the line headed by '#' will be ignored
-        # user_name port password dev_num sum_traffic
-        # 用户名 端口号 密码 设备数量 总流量
-        david 1314 password 3 30
+Usage: python create_account.py [-h] [-f] [--file <file-name>] [-e/--excel <excel-name> <sheet-name>]
+-h: print the usage of this script.
+-f: use the default file named 'create_account.txt' as a file used to create acc.
+--file <file-name>: file-name that a specific file named by you as a file used to create acc. 
+-e: use default create_account.xlsx and Sheet1 as excel name and sheet name respectively.
+--excel <excel-name> <sheet-name>: specify your excel file and the sheet name used to create acc.
+default: if no args is input, the script will exec just like 'python create_account.py -f'
+-----------------------------
+the non-excel file used to create acc must format just like:
+=========================================================
+# create_account.txt
+# the lines headed by '#' and blank lines will be ignored
+# user_name port password dev_num sum_traffic
+# 用户名 密码 端口 设备数量 总流量
+david password 1314 3 30
+=========================================================
     ''')
 
 

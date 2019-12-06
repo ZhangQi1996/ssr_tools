@@ -28,19 +28,20 @@
 1. 已经在同级目录添加了ssrmu.sh以及其依赖的mujson_mgr.py文件
 2. **注意目前程序仅支持py3**
 3. 默认编码utf-8
+4. 建议先切换到su下再进行操作
 
 #####注：如果需要重新配置加密方式，协议等，在create_account.py的main函数中的config字典中修改
 
 * 支持两种导入方式
     1. txt （默认）
         * 多种方式
-        * python create_account.py
-        * python create_account.py -f
-        * python create_account.py --file file-name
+        * sudo python create_account.py
+        * sudo python create_account.py -f
+        * sudo python create_account.py --file file-name
         * txt的格式参见使用帮助
     2. excel
-        * python create_account.py -e
-        * python create_account.py --excel excel-name sheet-name
+        * sudo python create_account.py -e
+        * sudo python create_account.py --excel excel-name sheet-name
 
 * 使用帮助
 ```
