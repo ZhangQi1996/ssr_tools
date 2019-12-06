@@ -26,6 +26,8 @@
 
 ~~3. 运行脚本 python create_account.py~~
 1. 已经在同级目录添加了ssrmu.sh以及其依赖的mujson_mgr.py文件
+2. **注意目前程序仅支持py3**
+3. 默认编码utf-8
 
 #####注：如果需要重新配置加密方式，协议等，在create_account.py的main函数中的config字典中修改
 

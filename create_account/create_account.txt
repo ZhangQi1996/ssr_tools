@@ -1,1 +1,4 @@
+# the line headed by '#' will be ignored
+# user_name port password dev_num sum_traffic
+# 用户名 端口号 密码 设备数量 总流量
 david 1314 password 3 30

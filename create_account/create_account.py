@@ -89,7 +89,7 @@ def create_one_account(process, user_name, value, config):
 
 
 def create_account(user_info, config):
-    process = pexpect.spawn("bash ssrmu.sh", logfile=sys.stdout)
+    process = pexpect.spawn("bash ssrmu.sh", logfile=sys.stdout, encoding='utf-8')
     process.expect("管理脚本")
     process.sendline("7")
     process.expect("用户配置")
@@ -103,7 +103,7 @@ def create_account(user_info, config):
             process.sendline("Y")
         except:
             # process.expect("错误")
-            process = pexpect.spawn("bash ssrmu.sh", logfile=sys.stdout)
+            process = pexpect.spawn("bash ssrmu.sh", logfile=sys.stdout, encoding='utf-8')
             process.expect("管理脚本")
             process.sendline("7")
             process.expect("用户配置")
@@ -114,7 +114,7 @@ def create_account(user_info, config):
 
 
 def show_account():
-    process = pexpect.spawn("bash ssrmu.sh", logfile=sys.stdout)
+    process = pexpect.spawn("bash ssrmu.sh", logfile=sys.stdout, encoding='utf-8')
     process.expect("请输入数字")
     process.sendline("5")
     process.expect("已使用流量总和")
@@ -124,7 +124,7 @@ def show_account():
 def create_acc_by_file(file_name='create_account.txt'):
     user_info = {}
     p = re.compile("^#.*$")
-    with open(file=file_name, mode='r', encoding='ascii') as f:
+    with open(file=file_name, mode='r', encoding='utf-8') as f:
         while True:
             line = f.readline()
             if not line:

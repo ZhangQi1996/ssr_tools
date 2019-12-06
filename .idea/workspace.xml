@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7795b41a-2610-4146-89ab-7a82291f3fbe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ssr_tools.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/create_account/ssrmu.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delete_account/ssrmu.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generate_qr/二维码/1234.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_account/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/create_account/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_account/create_account.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_account/create_account.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_account/create_account.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/create_account/create_account.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate_qr/input/config.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/generate_qr/input/config.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delete_account/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/delete_account/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delete_account/delete_account.py" beforeDir="false" afterPath="$PROJECT_DIR$/delete_account/delete_account.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,53 +15,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generate_qr/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/create_account/create_account.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="116" column="39" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="39" />
-              <folding>
-                <element signature="e#47#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/delete_account/delete_account.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="47" column="16" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/delete_account/ssrmu.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="136" column="30" selection-start-line="136" selection-start-column="27" selection-end-line="136" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/delete_account/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="160">
-                <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <first_editor relative-caret-position="220">
+                <caret line="14" selection-start-line="14" selection-end-line="14" />
               </first_editor>
               <second_editor />
             </state>
@@ -80,8 +32,8 @@
         <entry file="file://$PROJECT_DIR$/create_account/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="186">
-                <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <first_editor relative-caret-position="-114">
+                <caret line="25" lean-forward="true" selection-start-line="24" selection-end-line="25" />
               </first_editor>
               <second_editor />
             </state>
@@ -94,6 +46,8 @@
     <findStrings>
       <find>bash</find>
       <find>ssrmu.sh</find>
+      <find>pex</find>
+      <find>logfile=sys.stdout</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -104,6 +58,8 @@
       <list>
         <option value="$PROJECT_DIR$/create_account/create_account.py" />
         <option value="$PROJECT_DIR$/create_account/README.md" />
+        <option value="$PROJECT_DIR$/delete_account/delete_account.py" />
+        <option value="$PROJECT_DIR$/delete_account/README.md" />
       </list>
     </option>
   </component>
@@ -139,6 +95,12 @@
               <item name="ssr_tools" type="b2602c69:ProjectViewProjectNode" />
               <item name="ssr_tools" type="462c0819:PsiDirectoryNode" />
               <item name="generate_qr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssr_tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssr_tools" type="462c0819:PsiDirectoryNode" />
+              <item name="generate_qr" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -220,23 +182,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/create_account/create_account.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="116" column="39" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="39" />
-          <folding>
-            <element signature="e#47#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/delete_account/delete_account.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="47" column="16" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/delete_account/ssrmu.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -252,13 +197,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/create_account/ssrmu.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="136" column="40" selection-start-line="136" selection-start-column="27" selection-end-line="136" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generate_qr/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -267,11 +205,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/create_account/ssrmu.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="141" column="51" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_account/mujson_mgr.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_account/create_account.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delete_account/delete_account.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="30" column="80" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
+          <caret line="48" column="80" selection-start-line="48" selection-start-column="80" selection-end-line="48" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_account/create_account.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1869">
+          <caret line="116" column="27" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="27" />
+          <folding>
+            <element signature="e#47#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/delete_account/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="160">
-            <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <first_editor relative-caret-position="220">
+            <caret line="14" selection-start-line="14" selection-end-line="14" />
           </first_editor>
           <second_editor />
         </state>
@@ -280,8 +249,8 @@
     <entry file="file://$PROJECT_DIR$/create_account/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="186">
-            <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <first_editor relative-caret-position="-114">
+            <caret line="25" lean-forward="true" selection-start-line="24" selection-end-line="25" />
           </first_editor>
           <second_editor />
         </state>

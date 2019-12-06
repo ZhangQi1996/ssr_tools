@@ -28,7 +28,7 @@ def get_userinfo(excel_name, sheet_name):
 
 
 def delete_one_account(port):
-    process = pexpect.spawn("bash ssrmu.sh", logfile=sys.stdout)
+    process = pexpect.spawn("bash ssrmu.sh", logfile=sys.stdout, encoding='utf-8')
     process.expect("管理脚本")
     process.sendline("7")
     process.expect("用户配置")
@@ -46,7 +46,7 @@ def delete_account(user_info):
 
 
 def show_account():
-    process = pexpect.spawn("bash ssrmu.sh", logfile=sys.stdout)
+    process = pexpect.spawn("bash ssrmu.sh", logfile=sys.stdout, encoding='utf-8')
     process.expect("请输入数字")
     process.sendline("5")
     process.expect("用户总数")
