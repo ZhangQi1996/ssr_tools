@@ -8,7 +8,7 @@ import logging
 import time
 import re
 
-ARGS_CUR_POS = 1
+ARGS_CUR_POS = 0
 
 # 配置项
 config = {
@@ -124,7 +124,7 @@ def show_account():
 def create_acc_by_file(file_name='create_account.txt'):
     user_info = {}
     p = re.compile("^#.*$")
-    with open(file=file_name, mode='r', encoding='utf-8') as f:
+    with open(file=file_name, mode='r', encoding='ascii') as f:
         while True:
             line = f.readline()
             if not line:
@@ -132,7 +132,7 @@ def create_acc_by_file(file_name='create_account.txt'):
             line = line.rstrip('\n').strip()
             if p.match(line) is not None:
                 continue
-            user = line.split('\\s+')
+            user = re.split('\\s+', line)
             if len(user) < 5:
                 logging.error("the format of %s is illegal." % file_name)
                 sys.exit(-1)
