@@ -6,6 +6,21 @@ import pexpect
 import sys
 import logging
 import time
+import re
+
+ARGS_CUR_POS = 1
+
+# 配置项
+config = {
+    "加密方式": "10",
+    "协议插件": "1",
+    "混淆插件": "1",
+    "限制的设备数": "3",
+    "单线程 限速上限": "",
+    "总速度 限速上限": "",
+    "总流量上限": "50",
+    "禁止访问的端口": "22",
+}
 
 
 def get_userinfo(excel_name, sheet_name):
@@ -106,26 +121,33 @@ def show_account():
     time.sleep(1)
 
 
-if __name__ == '__main__':
-    # 配置项
-    config = {
-        "加密方式": "10",
-        "协议插件": "1",
-        "混淆插件": "1",
-        "限制的设备数": "5",
-        "单线程 限速上限": "",
-        "总速度 限速上限": "",
-        "总流量上限": "30",
-        "禁止访问的端口": "",
-    }
-    logging.basicConfig(level=logging.INFO)
-    try:
-        excel_name = sys.argv[1]
-        sheet_name = sys.argv[2]
-    except:
-        excel_name = "create_account.xlsx"
-        sheet_name = "Sheet1"
-        logging.info("未指定EXCEL与页签，默认读取{0}表格，{1}页签。".format(excel_name, sheet_name))
+def create_acc_by_file(file_name='create_account.txt'):
+    user_info = {}
+    p = re.compile("^#.*$")
+    with open(file=file_name, mode='r', encoding='utf-8') as f:
+        while True:
+            line = f.readline()
+            if not line:
+                break
+            line = line.rstrip('\n').strip()
+            if p.match(line) is not None:
+                continue
+            user = line.split('\\s+')
+            if len(user) < 5:
+                logging.error("the format of %s is illegal." % file_name)
+                sys.exit(-1)
+            user_info.update({user[0]: {
+                "pass_word": user[1],
+                "port": user[2],
+                "dev": user[3],
+                "flow": user[4],
+            }})
+    # 创建账号
+    create_account(user_info, config)
+    logging.info("任务完成。")
+
+
+def create_acc_by_excel(excel_name="create_account.xlsx", sheet_name="Sheet1"):
     # 获取EXCEL信息
     user_info = get_userinfo(excel_name, sheet_name)
     if not user_info:
@@ -133,5 +155,79 @@ if __name__ == '__main__':
         sys.exit(-1)
     # 创建账号
     create_account(user_info, config)
-
     logging.info("任务完成。")
+
+
+def judge():
+    """判断是否args越界"""
+    if ARGS_CUR_POS < len(sys.argv):
+        return True
+    logging.error("输入参数不合法，任务失败。")
+    usage()
+    sys.exit(-1)
+
+
+def usage():
+    logging.info('''
+        Usage: python create_account.py [-h] [-f] [--file <file-name>] [-e/--excel <excel-name> <sheet-name>]
+        -h: print the usage of this script.
+        -f: use the default file named 'create_acc.txt' as a file used to create acc.
+        --file <file-name>: file-name that a specific file named by you as a file used to create acc. 
+        -e: use default create_account.xlsx and Sheet1 as excel name and sheet name respectively.
+        --excel <excel-name> <sheet-name>: specify your excel file and the sheet name used to create acc.
+        default: if no args is input, the script will exec just like 'python create_account.py -f'
+        -----------------------------
+        the non-excel file used to create acc must format just like:
+        =========================================================
+        # create_acc.txt
+        # the line headed by '#' will be ignored
+        # user_name port password dev_num sum_traffic
+        # 用户名 端口号 密码 设备数量 总流量
+        david 1314 password 3 30
+    ''')
+
+
+def switch():
+    global ARGS_CUR_POS
+    ARGS_CUR_POS += 1
+    judge()
+    if sys.argv[ARGS_CUR_POS] == '-e':
+        create_acc_by_excel()
+        sys.exit(0)
+    elif sys.argv[ARGS_CUR_POS] == '--excel':
+        ARGS_CUR_POS += 1
+        judge()
+        excel_name = sys.argv[ARGS_CUR_POS]
+        ARGS_CUR_POS += 1
+        judge()
+        sheet_name = sys.argv[ARGS_CUR_POS]
+        ARGS_CUR_POS += 1
+        create_acc_by_excel(excel_name=excel_name, sheet_name=sheet_name)
+        sys.exit(0)
+    elif sys.argv[ARGS_CUR_POS] == '--file':
+        ARGS_CUR_POS += 1
+        judge()
+        file_name = sys.argv[ARGS_CUR_POS]
+        create_acc_by_file(file_name=file_name)
+        sys.exit(0)
+    elif sys.argv[ARGS_CUR_POS] == '-f':
+        create_acc_by_file()
+        sys.exit(0)
+    elif sys.argv[ARGS_CUR_POS] == '-h':
+        usage()
+        sys.exit(0)
+    else:
+        logging.error("the args you input are illegal..")
+        usage()
+        sys.exit(0)
+
+
+if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO)
+    if len(sys.argv) == 1:
+        create_acc_by_file()
+        sys.exit(0)
+    switch()
+
+
+
