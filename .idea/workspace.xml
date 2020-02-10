@@ -11,18 +11,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>bash</find>
-      <find>ssrmu.sh</find>
-      <find>pex</find>
-      <find>logfile=sys.stdout</find>
-      <find>create</find>
-      <find>delete_acc</find>
-      <find>create_acc</find>
-      <find>create_account</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -55,7 +43,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575619851307</updated>
       <workItem from="1581354139352" duration="591000" />
-      <workItem from="1581354743354" duration="255000" />
+      <workItem from="1581354743354" duration="584000" />
     </task>
     <servers />
   </component>
