@@ -39,6 +39,7 @@
    ```
 
    当弹出用户配置信息界面后，即成功安装shadowsocksR。然后进行加速即可使用。
+3. 目前为止已经完成了ssr的配置，并启动（默认就是开机自启动的），为了提高体验度最好安装加速模块
 
 ### 加速
 
@@ -49,7 +50,7 @@
 2. ~~安装锐速：~~
     * ~~wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh~~
     * ~~当命令执行结束，并且有[Running Status]ServerSpeeder is running!时，说明加速成功。~~
-3. 由于云服务器基于不同的虚拟化技术，可能导致替换内核后无法连接网络的问题，现更新网络加速部分
+3. 1,2两条可能由于云服务器基于不同的虚拟化技术，可能导致替换内核后无法连接网络的问题，现更新网络加速部分
     1. 下载配置
         ```
         # 最好在root下执行，键入
@@ -85,11 +86,18 @@
                 
                 返回值有 tcp_bbrplus 模块即说明 bbrplus 已启动。注意：并不是所有的 VPS 都会有此返回值，若没有也属正常。
             ```
-
-### 使用
+    3. 已经完成加速部分的安装使用了
+    
+### 使用SSR
 
 * ssr服务器搭建好后，客户端使用方法：<https://github.com/YeYoot/ssr_client_guide/wiki>
 
 ### 其他
 
 * 服务器搭建好后，可以使用以下辅助脚本。
+    1. 为ssr批量创建用户
+        * <https://github.com/ZhangQi1996/ssr_tools/tree/master/create_account>
+    2. 为ssr批量删除用户
+        * <https://github.com/ZhangQi1996/ssr_tools/tree/master/delete_account>
+    3. 为ssr产生特定用户的二维码
+        * <https://github.com/ZhangQi1996/ssr_tools/tree/master/generate_qr>

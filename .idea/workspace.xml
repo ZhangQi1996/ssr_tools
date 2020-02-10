@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7795b41a-2610-4146-89ab-7a82291f3fbe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/imgs/net_accu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/科学上网简要教程.md" beforeDir="false" afterPath="$PROJECT_DIR$/科学上网简要教程.md" afterDir="false" />
-    </list>
+    <list default="true" id="7795b41a-2610-4146-89ab-7a82291f3fbe" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +39,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575619851307</updated>
       <workItem from="1581354139352" duration="591000" />
-      <workItem from="1581354743354" duration="584000" />
+      <workItem from="1581354743354" duration="1073000" />
     </task>
     <servers />
   </component>
@@ -59,9 +55,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="292" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1581354729815" />
-    <state x="396" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1581354752678">
+    <state x="396" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1581355915932">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="396" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581354752678" />
+    <state x="396" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581355915932" />
   </component>
 </project>
