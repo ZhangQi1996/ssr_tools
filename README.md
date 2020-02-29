@@ -21,7 +21,7 @@
 
    ~~wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssrmu.sh && chmod +x ssrmu.sh && bash ssrmu.sh~~
    ```bash
-   wget -N --no-check-certificate https://gitee.com/ChiZhung/ssr_tools/blob/master/ssrmu.sh && chmod +x ssrmu.sh && bash ssrmu.sh 
+   wget -N --no-check-certificate https://gitee.com/ChiZhung/ssr_tools/raw/master/ssrmu.sh && chmod +x ssrmu.sh && bash ssrmu.sh 
    ```
    
 2. 脚本执行后，输入1，回车，开始安装shadowsocksR；接下来根据自己的情况输入即可，不想看的，可以按我的顺序无脑来：
