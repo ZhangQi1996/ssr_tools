@@ -18,11 +18,15 @@
 ### 安装shadowsocksR
 
 1. 远程登陆到VPS服务器，执行以下命令：
-
-   ~~wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssrmu.sh && chmod +x ssrmu.sh && bash ssrmu.sh~~
-   ```bash
-   wget -N --no-check-certificate https://gitee.com/ChiZhung/ssr_tools/raw/master/ssrmu.sh && chmod +x ssrmu.sh && bash ssrmu.sh 
-   ```
+    1. 切换到root下，输入su回车（若已经是root用户则不用切换）
+    2. 输入root账户下的密码，切换成功 
+    3. 安装
+    
+        ~~wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssrmu.sh && chmod +x ssrmu.sh && bash ssrmu.sh~~
+        
+        ```bash
+        wget -N --no-check-certificate https://gitee.com/ChiZhung/ssr_tools/raw/master/ssrmu.sh && chmod +x ssrmu.sh && bash ssrmu.sh 
+        ```
    
 2. 脚本执行后，输入1，回车，开始安装shadowsocksR；接下来根据自己的情况输入即可，不想看的，可以按我的顺序无脑来：
 
