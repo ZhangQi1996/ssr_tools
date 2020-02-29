@@ -232,6 +232,8 @@ def switch():
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
+    if not os.path.exists('ssrmu.sh'):
+        raise Exception('请将ssrmu.sh脚本与本脚本放于同一目录中')
     if len(sys.argv) == 1:
         create_acc_by_file()
         sys.exit(0)

@@ -11,8 +11,11 @@ export PATH
 #=================================================
 
 sh_ver="1.0.26"
+# 当前目录
+cur_path=$(pwd)
 filepath=$(cd "$(dirname "$0")"; pwd)
 file=$(echo -e "${filepath}"|awk -F "$0" '{print $1}')
+# 你能根据你的需要修改这个ssr的安装目录
 ssr_folder="/usr/local/shadowsocksr"
 config_file="${ssr_folder}/config.json"
 config_user_file="${ssr_folder}/user-config.json"
@@ -852,18 +855,20 @@ Debian_apt(){
 }
 # 下载 ShadowsocksR
 Download_SSR(){
-	cd "/usr/local"
+  cd $cur_path || exit 1
+	[[ ! -e $ssr_folder ]] && echo -e "ssr的安装目录已经存在，请卸载先前的ssr或者将该目录删除(rm -rf $ssr_folder)后在重新安装" && exit 1
 	wget -N --no-check-certificate "https://github.com/ToyoDAdoubiBackup/shadowsocksr/archive/manyuser.zip"
 	#git config --global http.sslVerify false
 	#env GIT_SSL_NO_VERIFY=true git clone -b manyuser https://github.com/ToyoDAdoubiBackup/shadowsocksr.git
 	#[[ ! -e ${ssr_folder} ]] && echo -e "${Error} ShadowsocksR服务端 下载失败 !" && exit 1
 	[[ ! -e "manyuser.zip" ]] && echo -e "${Error} ShadowsocksR服务端 压缩包 下载失败 !" && rm -rf manyuser.zip && exit 1
-	unzip "manyuser.zip"
-	[[ ! -e "/usr/local/shadowsocksr-manyuser/" ]] && echo -e "${Error} ShadowsocksR服务端 解压失败 !" && rm -rf manyuser.zip && exit 1
-	mv "/usr/local/shadowsocksr-manyuser/" "/usr/local/shadowsocksr/"
-	[[ ! -e "/usr/local/shadowsocksr/" ]] && echo -e "${Error} ShadowsocksR服务端 重命名失败 !" && rm -rf manyuser.zip && rm -rf "/usr/local/shadowsocksr-manyuser/" && exit 1
+	[[ -e /tmp/shadowsocksr-manyuser/ ]] && rf -rf /tmp/shadowsocksr-manyuser/
+	unzip "manyuser.zip" -d /tmp/shadowsocksr-manyuser
+	[[ ! -e /tmp/shadowsocksr-manyuser ]] && echo -e "${Error} ShadowsocksR服务端 解压失败 !" && rm -rf manyuser.zip && exit 1
+	mv -f /tmp/shadowsocksr-manyuser/ $ssr_folder
+	[[ ! -e $ssr_folder ]] && echo -e "${Error} ShadowsocksR服务端 重命名失败 !" && rm -rf manyuser.zip && rm -rf "/tmp/shadowsocksr-manyuser/" && exit 1
 	rm -rf manyuser.zip
-	cd "shadowsocksr"
+	cd $ssr_folder || exit 1
 	cp "${ssr_folder}/config.json" "${config_user_file}"
 	cp "${ssr_folder}/mysql.json" "${ssr_folder}/usermysql.json"
 	cp "${ssr_folder}/apiconfig.py" "${config_user_api_file}"
@@ -875,6 +880,8 @@ Download_SSR(){
 	sed -i 's/ \/\/ only works under multi-user mode//g' "${config_user_file}"
 	echo -e "${Info} ShadowsocksR服务端 下载完成 !"
 }
+
+# 设置ssr自启动
 Service_SSR(){
 	if [[ ${release} = "centos" ]]; then
 		if ! wget --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/service/ssrmu_centos -O /etc/init.d/ssrmu; then
@@ -1161,8 +1168,8 @@ Modify_port(){
 Modify_Config(){
 	SSR_installation_status
 	echo && echo -e "你要做什么？
- ${Green_font_prefix}1.${Font_color_suffix}  添加 用户配置
- ${Green_font_prefix}2.${Font_color_suffix}  删除 用户配置
+ ${Green_font_prefix}1.${Font_color_suffix}  添加 用户配置(批量添加可参见https://gitee.com/ChiZhung/ssr_tools/tree/master/create_account)
+ ${Green_font_prefix}2.${Font_color_suffix}  删除 用户配置(批量删除可参见https://gitee.com/ChiZhung/ssr_tools/tree/master/delete_account)
 ————— 修改 用户配置 —————
  ${Green_font_prefix}3.${Font_color_suffix}  修改 用户密码
  ${Green_font_prefix}4.${Font_color_suffix}  修改 加密方式
@@ -1793,6 +1800,8 @@ menu_status(){
 		echo -e " 当前状态: ${Red_font_prefix}未安装${Font_color_suffix}"
 	fi
 }
+
+[[ -d $ssr_folder ]] && cd $ssr_folder
 check_sys
 [[ ${release} != "debian" ]] && [[ ${release} != "ubuntu" ]] && [[ ${release} != "centos" ]] && echo -e "${Error} 本脚本不支持当前系统 ${release} !" && exit 1
 action=$1

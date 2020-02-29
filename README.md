@@ -19,10 +19,11 @@
 
 1. 远程登陆到VPS服务器，执行以下命令：
 
+   ~~wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssrmu.sh && chmod +x ssrmu.sh && bash ssrmu.sh~~
+   ```bash
+   wget -N --no-check-certificate https://github.com/ZhangQi1996/ssr_tools/tree/master/ssrmu.sh && chmod +x ssrmu.sh && bash ssrmu.sh 
    ```
-   wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssrmu.sh && chmod +x ssrmu.sh && bash ssrmu.sh
-   ```
-
+   
 2. 脚本执行后，输入1，回车，开始安装shadowsocksR；接下来根据自己的情况输入即可，不想看的，可以按我的顺序无脑来：
 
    ```
@@ -60,6 +61,8 @@
     2. 显示的界面
     
         ![](imgs/net_accu.png)
+
+        0. 通过iptables -L -n命令查看当前的防火墙策略，截图下来包含你所设置的ssr通信端口的防火墙信息
         1. 输入2安装bbrplus plus内核，这个过程需要一段时间，然后会提醒你是否需要重启，输入y
         2. 会断开ssh连接，等待一段时间，再次连接上去。
         3. 再次执行那个脚本(bash tcp.sh)，输入7便完成了配置，会提示你bbrplus plus启动成功
@@ -86,11 +89,12 @@
                 
                 返回值有 tcp_bbrplus 模块即说明 bbrplus 已启动。注意：并不是所有的 VPS 都会有此返回值，若没有也属正常。
             ```
+        6. 由于更换内核，原本的防火墙策略可能已被删除，查看iptables -L -n看，若已被清除，则根据之前步骤0的截图通过iptables命令重新注入到iptables中
     3. 已经完成加速部分的安装使用了
     
 ### 使用SSR
 
-* ssr服务器搭建好后，客户端使用方法：<https://github.com/YeYoot/ssr_client_guide/wiki>
+* ssr服务器搭建好后，客户端使用方法：<https://gitee.com/ChiZhung/ssr_client_guide/wikis>
 
 ### 其他
 

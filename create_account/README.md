@@ -25,8 +25,8 @@
 ~~2. 拷贝create_account.py脚本和create_account.xlsx表格到与ssrmu.sh文件的同级目录下~~
 
 ~~3. 运行脚本 python create_account.py~~
-1. 已经在同级目录添加了ssrmu.sh以及其依赖的mujson_mgr.py文件
-2. **注意目前程序仅支持py3**
+1. **注意将ssrmu.sh放置与本脚本位于的同一目录中**
+2. **注意本脚本支持py3，py2支持程度未知**
 3. 默认编码utf-8
 4. 建议先切换到su下再进行操作
 
