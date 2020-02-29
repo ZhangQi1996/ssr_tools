@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7795b41a-2610-4146-89ab-7a82291f3fbe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/shadowsocksr-manyuser.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssrmu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ssrmu.sh" afterDir="false" />
-    </list>
+    <list default="true" id="7795b41a-2610-4146-89ab-7a82291f3fbe" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,9 +24,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\gitRepo\ssr_tools" />
       <recent name="F:\gitRepo\ssr_tools\create_account" />
       <recent name="F:\gitRepo\ssr_tools\delete_account" />
-      <recent name="F:\gitRepo\ssr_tools" />
       <recent name="G:\gitRepo\ssr_tools\delete_account" />
       <recent name="G:\gitRepo\ssr_tools\create_account" />
     </key>
@@ -49,7 +45,7 @@
       <workItem from="1581354743354" duration="1073000" />
       <workItem from="1581355916566" duration="529000" />
       <workItem from="1582965148334" duration="1291000" />
-      <workItem from="1582966627295" duration="599000" />
+      <workItem from="1582966627295" duration="865000" />
     </task>
     <servers />
   </component>

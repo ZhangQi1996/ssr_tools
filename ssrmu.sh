@@ -856,7 +856,7 @@ Debian_apt(){
 # 下载 ShadowsocksR
 Download_SSR(){
   cd $cur_path || exit 1
-	[[ -e $ssr_folder ]] && echo -e "ssr的安装目录已经存在，请卸载先前的ssr或者将该目录删除(rm -rf $ssr_folder)后在重新安装" && exit 1
+	[[ -d $ssr_folder ]] && echo -e "ssr的安装目录已经存在，请卸载先前的ssr或者将该目录删除(rm -rf $ssr_folder)后在重新安装" && exit 1
 	# wget -N --no-check-certificate "https://github.com/ToyoDAdoubiBackup/shadowsocksr/archive/manyuser.zip"
 	wget -N --no-check-certificate https://gitee.com/ChiZhung/ssr_tools/raw/master/shadowsocksr-manyuser.zip
 	#git config --global http.sslVerify false
@@ -864,9 +864,9 @@ Download_SSR(){
 	#[[ ! -e ${ssr_folder} ]] && echo -e "${Error} ShadowsocksR服务端 下载失败 !" && exit 1
 	[[ ! -e "manyuser.zip" ]] && echo -e "${Error} ShadowsocksR服务端 压缩包 下载失败 !" && rm -rf manyuser.zip && exit 1
 	[[ -e /tmp/shadowsocksr-manyuser/ ]] && rf -rf /tmp/shadowsocksr-manyuser/
-	unzip "manyuser.zip" -d /tmp/shadowsocksr-manyuser
+	unzip "manyuser.zip" -d /tmp
 	[[ ! -e /tmp/shadowsocksr-manyuser ]] && echo -e "${Error} ShadowsocksR服务端 解压失败 !" && rm -rf manyuser.zip && exit 1
-	mv -f /tmp/shadowsocksr-manyuser/ $ssr_folder
+	mv -f /tmp/shadowsocksr-manyuser $ssr_folder
 	[[ ! -e $ssr_folder ]] && echo -e "${Error} ShadowsocksR服务端 重命名失败 !" && rm -rf manyuser.zip && rm -rf "/tmp/shadowsocksr-manyuser/" && exit 1
 	rm -rf manyuser.zip
 	cd $ssr_folder || exit 1
