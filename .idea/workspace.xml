@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7795b41a-2610-4146-89ab-7a82291f3fbe" name="Default Changelist" comment="" />
+    <list default="true" id="7795b41a-2610-4146-89ab-7a82291f3fbe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,11 +21,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/delete_account" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/create_account" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\gitRepo\ssr_tools\create_account" />
+      <recent name="F:\gitRepo\ssr_tools\delete_account" />
+      <recent name="F:\gitRepo\ssr_tools" />
       <recent name="G:\gitRepo\ssr_tools\delete_account" />
       <recent name="G:\gitRepo\ssr_tools\create_account" />
     </key>
@@ -41,6 +46,7 @@
       <workItem from="1581354139352" duration="591000" />
       <workItem from="1581354743354" duration="1073000" />
       <workItem from="1581355916566" duration="529000" />
+      <workItem from="1582965148334" duration="303000" />
     </task>
     <servers />
   </component>
@@ -48,10 +54,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="499" y="161" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582965212277">
+    <state x="499" y="161" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582965239764">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="161" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1582965212277" />
+    <state x="499" y="161" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1582965239764" />
     <state x="881" y="282" key="GrepConsoleSound" timestamp="1581354806726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
