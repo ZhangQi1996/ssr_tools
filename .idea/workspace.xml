@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7795b41a-2610-4146-89ab-7a82291f3fbe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssrmu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ssrmu.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +48,7 @@
       <workItem from="1581355916566" duration="529000" />
       <workItem from="1582965148334" duration="1291000" />
       <workItem from="1582966627295" duration="982000" />
-      <workItem from="1582967743636" duration="254000" />
+      <workItem from="1582967743636" duration="795000" />
     </task>
     <servers />
   </component>
@@ -69,9 +68,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="292" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1581354729815" />
-    <state x="396" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1582967742954">
+    <state x="396" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1582969107264">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="396" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582967742954" />
+    <state x="396" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582969107264" />
   </component>
 </project>
