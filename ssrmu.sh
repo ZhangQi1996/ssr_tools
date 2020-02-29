@@ -856,7 +856,7 @@ Debian_apt(){
 # 下载 ShadowsocksR
 Download_SSR(){
   cd $cur_path || exit 1
-	[[ ! -e $ssr_folder ]] && echo -e "ssr的安装目录已经存在，请卸载先前的ssr或者将该目录删除(rm -rf $ssr_folder)后在重新安装" && exit 1
+	[[ -e $ssr_folder ]] && echo -e "ssr的安装目录已经存在，请卸载先前的ssr或者将该目录删除(rm -rf $ssr_folder)后在重新安装" && exit 1
 	wget -N --no-check-certificate "https://github.com/ToyoDAdoubiBackup/shadowsocksr/archive/manyuser.zip"
 	#git config --global http.sslVerify false
 	#env GIT_SSL_NO_VERIFY=true git clone -b manyuser https://github.com/ToyoDAdoubiBackup/shadowsocksr.git
