@@ -665,7 +665,7 @@ Set_config_enable(){
 	elif [[ "${enable}" == "0" ]]; then
 		echo -e "端口 [${ssr_port}] 的账号状态为：${Green_font_prefix}禁用${Font_color_suffix} , 是否切换为 ${Red_font_prefix}启用${Font_color_suffix} ?[Y/n]"
 		read -e -p "(默认: Y):" ssr_enable_yn
-		[[ -z "${ssr_enable_yn}" ]] && ssr_enable_yn = "y"
+		[[ -z "${ssr_enable_yn}" ]] && ssr_enable_yn="y"
 		if [[ "${ssr_enable_yn}" == [Yy] ]]; then
 			ssr_enable="1"
 		else
@@ -862,13 +862,13 @@ Download_SSR(){
 	#git config --global http.sslVerify false
 	#env GIT_SSL_NO_VERIFY=true git clone -b manyuser https://github.com/ToyoDAdoubiBackup/shadowsocksr.git
 	#[[ ! -e ${ssr_folder} ]] && echo -e "${Error} ShadowsocksR服务端 下载失败 !" && exit 1
-	[[ ! -e "manyuser.zip" ]] && echo -e "${Error} ShadowsocksR服务端 压缩包 下载失败 !" && rm -rf manyuser.zip && exit 1
+	[[ ! -e "shadowsocksr-manyuser.zip" ]] && echo -e "${Error} ShadowsocksR服务端 压缩包 下载失败 !" && rm -rf shadowsocksr-manyuser.zip && exit 1
 	[[ -e /tmp/shadowsocksr-manyuser/ ]] && rf -rf /tmp/shadowsocksr-manyuser/
-	unzip "manyuser.zip" -d /tmp
-	[[ ! -e /tmp/shadowsocksr-manyuser ]] && echo -e "${Error} ShadowsocksR服务端 解压失败 !" && rm -rf manyuser.zip && exit 1
+	unzip "shadowsocksr-manyuser.zip" -d /tmp
+	[[ ! -e /tmp/shadowsocksr-manyuser ]] && echo -e "${Error} ShadowsocksR服务端 解压失败 !" && rm -rf shadowsocksr-manyuser.zip && exit 1
 	mv -f /tmp/shadowsocksr-manyuser $ssr_folder
-	[[ ! -e $ssr_folder ]] && echo -e "${Error} ShadowsocksR服务端 重命名失败 !" && rm -rf manyuser.zip && rm -rf "/tmp/shadowsocksr-manyuser/" && exit 1
-	rm -rf manyuser.zip
+	[[ ! -e $ssr_folder ]] && echo -e "${Error} ShadowsocksR服务端 重命名失败 !" && rm -rf shadowsocksr-manyuser.zip && rm -rf "/tmp/shadowsocksr-manyuser/" && exit 1
+	rm -rf shadowsocksr-manyuser.zip
 	cd $ssr_folder || exit 1
 	cp "${ssr_folder}/config.json" "${config_user_file}"
 	cp "${ssr_folder}/mysql.json" "${ssr_folder}/usermysql.json"
